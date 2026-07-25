@@ -249,9 +249,9 @@ export const connect = async (server: any) => {
       let find_user_already:any []= [];
       try {
         find_user_already=  socket_users.filter(rows=>rows.device_id.toString() == connection_device_id.toString() && rows.uid.toString() == connection_uid.toString() && rows.mode == connection_mode)
-      } catch (error) {
-        
-      }
+      } catch (error: any) {
+      console.error("[socket.ts] error:", error);
+    }
 
          if(find_user_already.length == 0){
          
@@ -6443,7 +6443,9 @@ export const connect = async (server: any) => {
           if (mySocketIds.length > 0) {
             io.to(mySocketIds).emit("authentication_fail", data);
           }
-        } catch (error) {}
+        } catch (error: any) {
+      console.error("[socket.ts] error:", error);
+    }
       });
 
       socket.on("add_device",async(data:any)=>{
@@ -6681,9 +6683,9 @@ export const connect = async (server: any) => {
               is_admin:is_adminData.length>0?1:0
             });
           }
-        } catch (error) {
-          
-        }
+        } catch (error: any) {
+      console.error("[socket.ts] error:", error);
+    }
       })
       socket.on("disconnect", async () => {
         let offlineUser = socket_users.find(
@@ -6743,8 +6745,8 @@ export const connect = async (server: any) => {
         );
         socket.removeAllListeners();
       });
-    } catch (error) {
-      
+    } catch (error: any) {
+      console.error("[socket.ts] error:", error);
     }
     
 
