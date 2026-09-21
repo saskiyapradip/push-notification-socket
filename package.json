@@ -1,0 +1,37 @@
+{
+  "name": "push-notification-socket",
+  "version": "1.0.0",
+  "description": "Realtime Socket.IO service for chat/call notifications and push delivery (Android/iOS).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
+    "@types/uuid": "^10.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@types/cron": "^2.4.0",
+    "@types/http-proxy": "^1.17.14",
+    "@types/node-cron": "^3.0.11",
+    "apn": "^2.2.0",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.3.1",
+    "firebase-admin": "^12.0.0",
+    "http-proxy": "^1.18.1",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.30.1",
+    "mongoose": "^8.0.4",
+    "node-cron": "^3.0.3",
+    "nodemon": "^3.0.2",
+    "rate-limiter-flexible": "^7.3.0",
+    "socket.io": "^4.7.4",
+    "uuid": "^10.0.0"
+  }
+}
